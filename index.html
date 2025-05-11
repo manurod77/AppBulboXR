@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BulboXR - Experiencia Interactiva</title>
+    <title>BULBO_XR - Experiencia Expandida</title>
     <style>
         :root {
             --primary-color: #6a5acd;
@@ -27,23 +27,52 @@
             padding: 20px;
         }
         
+        /* ENCABEZADO PRINCIPAL */
         header {
             text-align: center;
-            padding: 20px 0;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 30px 0;
+            background-color: #191919;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
             border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            color: white;
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+        }
+        
+        header p {
+            color: #e0e0e0;
+            font-size: 18px;
+            margin: 0;
+            font-weight: 300;
         }
         
         .logo {
             max-width: 150px;
             max-height: 150px;
-            margin-bottom: 10px;
+            margin: 0 auto 15px auto;
+            display: block;
         }
         
-        h1 {
-            margin: 0;
-            color: #333;
+        .postcard-logo {
+            max-width: 180px;
+            max-height: 180px;
+            margin: 15px auto;
+            display: block;
+        }
+        
+        .qr-image {
+            width: 180px;
+            height: 180px;
+            margin: 15px auto;
+            display: block;
+            border-radius: 8px;
         }
         
         /* Menú Interactivo */
@@ -226,150 +255,53 @@
             background-color: white;
             border-radius: 10px;
             padding: 20px;
-            margin: 20px auto;
+            margin: 20px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            max-width: 800px;
         }
         
         .postcard-title {
             text-align: center;
             color: #333;
             margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
         }
         
         .postcard-sides {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
         }
         
         .postcard-side {
+            flex: 1;
+            min-width: 250px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            position: relative;
-            /* Establecer relación de aspecto 4:6 (o 2:3) */
-            width: 300px;
-            height: 450px;
-            box-sizing: border-box;
-        }
-        
-        .postcard-side:before {
-            content: "";
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 10px;
-            color: rgba(255,255,255,0.5);
-            font-style: italic;
-        }
-        
-        .postcard-side.frontal {
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            text-align: center;
+        }
+        
+        .postcard-side.frontal {
             background-color: #0a0a0a;
             color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .postcard-side.frontal:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
-            z-index: 1;
-        }
-        
-        .postcard-side.frontal .logo-container,
-        .postcard-side.frontal h2 {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .postcard-side.frontal:before {
-            content: "FRONTAL";
         }
         
         .postcard-side.reverso {
             background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-image: linear-gradient(to bottom, #f9f9f9 95%, transparent 5%),
-                              linear-gradient(to right, #f9f9f9 95%, transparent 5%);
-            background-size: 30px 30px;
-            background-position: 0 0;
-            background-repeat: repeat;
-            background-color: #f9f9f9;
+            color: #333;
         }
         
-        .postcard-side.reverso:before {
-            content: "REVERSO";
-            color: rgba(0,0,0,0.3);
-        }
-        
-        .logo {
-            max-width: 150px;
-            max-height: 150px;
-            margin-bottom: 20px;
-            width: 70%;
-            height: auto;
-        }
-        
-        .qr-code {
-            width: 180px;
-            height: 180px;
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin: 20px 0;
-        }
-        
-        .qr-code img {
-            width: 150px;
-            height: 150px;
-            object-fit: contain;
-        }
-        
-        .instructions {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-        
-        .instructions li {
+        .postcard-side h3 {
+            text-align: center;
             margin-bottom: 15px;
-            padding: 10px 15px;
-            position: relative;
-            background-color: #f0f0f0;
-            border-radius: 5px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        
-        .instructions li:hover {
-            transform: translateX(5px);
-            background-color: #e8e8e8;
-        }
-        
-        .instructions li:before {
-            content: "→";
-            position: absolute;
-            left: -20px;
-            color: var(--primary-color);
-            font-weight: bold;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            width: 80%;
+            font-size: 18px;
         }
         
         /* Footer */
@@ -412,28 +344,9 @@
             .menu-option {
                 width: 80%;
             }
-        }
-        
-        /* Responsive adjustments for postcard */
-        @media (max-width: 768px) {
+            
             .postcard-sides {
                 flex-direction: column;
-                align-items: center;
-            }
-            
-            .postcard-side {
-                /* Maintain aspect ratio but scale down */
-                width: 240px;
-                height: 360px;
-                margin-bottom: 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .postcard-side {
-                /* Even smaller for very small screens but maintain ratio */
-                width: 200px;
-                height: 300px;
             }
         }
         
@@ -465,50 +378,37 @@
 </head>
 <body>
     <div class="container">
+        <!-- ENCABEZADO PRINCIPAL -->
         <header>
-            <div class="logo-container">
-                <!-- Intentar con URL directa a GitHub Pages o repositorio -->
-                <img src="https://github.com/manurod77/AppBulboXR/blob/main/img/logo.png?raw=true" 
-                     alt="BulboXR Logo" 
-                     class="logo"
-                     onerror="this.onerror=null; this.src='https://via.placeholder.com/150/6a5acd/FFFFFF?text=BulboXR';">
-            </div>
+            <img src="https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/logo.png" 
+                 alt="BULBO_XR Logo" 
+                 class="logo"
+                 onerror="this.onerror=null; this.src='https://via.placeholder.com/150/6a5acd/FFFFFF?text=BULBO_XR';">
             <h1>BULBO_XR</h1>
             <p>Experiencia Expandida de Arte y Cultura</p>
         </header>
         
+        <!-- POSTCARD ACTIVACIÓN -->
         <div class="postcard" id="postcard">
             <h2 class="postcard-title">1. Activación Inicial</h2>
             
             <div class="postcard-sides">
                 <div class="postcard-side frontal">
-                    <div class="logo-container">
-                        <img src="img/logo.png" 
-                             alt="BulboXR Logo" 
-                             class="logo"
-                             onerror="this.onerror=null; this.src='https://via.placeholder.com/150/6a5acd/FFFFFF?text=BulboXR';">
-                    </div>
-                    <h2 style="text-align: center; margin-top: 10px; font-weight: bold; font-size: 24px;">BULBO_XR</h2>
-                    <p style="text-align: center; margin-top: 5px; font-size: 14px; opacity: 0.8;">Experiencia Expandida de Arte y Cultura</p>
+                    <h3>FRONTAL</h3>
+                    <img src="https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/logo.png" 
+                         alt="BULBO_XR Logo" 
+                         class="postcard-logo"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/180/6a5acd/FFFFFF?text=BULBO_XR';">
                 </div>
                 
                 <div class="postcard-side reverso">
-                    <div class="qr-code">
-                        <img src="img/qr.png" 
-                             alt="Código QR BulboXR" 
-                             onerror="this.onerror=null; this.src='https://via.placeholder.com/150/42b4e6/FFFFFF?text=QR';">
-                        <div style="text-align: center; margin-top: 10px; font-weight: bold; color: #333;">SCAN ME</div>
-                    </div>
+                    <h3>REVERSO</h3>
+                    <img src="https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/QR.png" 
+                         alt="Código QR BULBO_XR" 
+                         class="qr-image"
+                         onerror="this.onerror=null; this.src='https://via.placeholder.com/180/42b4e6/FFFFFF?text=QR';">
                 </div>
             </div>
-            
-            <div class="scan-animation">
-                <div class="scan-line"></div>
-            </div>
-            <button id="start-experience" style="display: block; margin: 20px auto; padding: 10px 20px; background-color: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer;">
-                Simular Escaneo
-            </button>
-        </div>
             
             <div class="scan-animation">
                 <div class="scan-line"></div>
@@ -518,8 +418,9 @@
             </button>
         </div>
         
+        <!-- MENÚ INTERACTIVO -->
         <div class="menu-container" id="menu" style="display: none;">
-            <h2 class="menu-title">2. Menú Interactivo BulboXR</h2>
+            <h2 class="menu-title">2. Menú Interactivo BULBO_XR</h2>
             <p style="text-align: center;">WebAR / WebXR (sin app)</p>
             
             <div class="menu-options">
@@ -624,14 +525,20 @@
     <script>
         // Precargar imágenes para mejor rendimiento
         function preloadImages() {
+            // Intentar diferentes formatos de URL para las imágenes
             const imageUrls = [
-                "img/logo.png",
-                "img/qr.png"
+                // Formato raw.githubusercontent.com
+                "https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/logo.png",
+                "https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/QR.png",
+                // Formato github.com con raw=true
+                "https://github.com/manurod77/AppBulboXR/blob/main/img/logo.png?raw=true",
+                "https://github.com/manurod77/AppBulboXR/blob/main/img/QR.png?raw=true"
             ];
             
             imageUrls.forEach(function(url) {
                 const img = new Image();
                 img.src = url;
+                console.log("Precargando imagen: " + url);
             });
         }
         
@@ -645,16 +552,28 @@
                 
                 img.addEventListener('error', function() {
                     console.error('Error al cargar la imagen:', img.src);
-                    // Intenta con URL alternativa
-                    if (img.src.includes('logo.png')) {
-                        console.log('Intentando URL alternativa para el logo...');
-                        img.src = 'https://via.placeholder.com/150/6a5acd/FFFFFF?text=BulboXR';
+                    // Intenta URL directa de GitHub
+                    if (img.src.includes('github.com') && img.src.includes('blob/main')) {
+                        // Convertir URL de GitHub a raw.githubusercontent.com
+                        let rawUrl = img.src.replace('github.com', 'raw.githubusercontent.com')
+                                           .replace('/blob/main/', '/main/');
+                        rawUrl = rawUrl.split('?')[0]; // Quitar parámetros
+                        
+                        console.log('Intentando URL alternativa:', rawUrl);
+                        img.src = rawUrl;
                     }
-                    // Si es QR
-                    else if (img.src.includes('qr.png')) {
-                        console.log('Intentando URL alternativa para el QR...');
-                        img.src = 'https://via.placeholder.com/150/42b4e6/FFFFFF?text=QR';
-                    }
+                    // Si es una URL raw que falló, intentar con placeholder
+                    else if (img.src.includes('raw.githubusercontent.com')) {
+                        // Si es logo
+                        if (img.src.includes('logo.png')) {
+                            console.log('Usando placeholder para el logo...');
+                            img.src = 'https://via.placeholder.com/180/6a5acd/FFFFFF?text=BULBO_XR';
+                        }
+                        // Si es QR
+                        else if (img.src.includes('QR.png')) {
+                            console.log('Usando placeholder para el QR...');
+                            img.src = 'https://via.placeholder.com/180/42b4e6/FFFFFF?text=QR';
+                        }
                     }
                 });
             });
@@ -855,6 +774,16 @@
         
         // Execute capability check
         window.addEventListener('load', checkDeviceCapabilities);
+        
+        // Check if page is loaded from vercel.app and log
+        window.addEventListener('load', function() {
+            console.log("BULBO_XR aplicación cargada completamente");
+            console.log("Versión: 2.0.0");
+            console.log("URL actual:", window.location.href);
+            if (window.location.href.includes('vercel.app')) {
+                console.log("Ejecutando desde Vercel - asegúrate de usar la versión más reciente");
+            }
+        });
     </script>
 </body>
 </html>
