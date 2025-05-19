@@ -331,7 +331,6 @@
         <!-- POSTCARD ACTIVACIÓN -->
         <div class="postcard" id="postcard">
             <h2 class="postcard-title">1. Activación Inicial</h2>
-            
             <div class="postcard-sides">
                 <div class="postcard-side frontal">
                     <h3>FRONTAL</h3>
@@ -348,7 +347,6 @@
                          onerror="this.onerror=null; this.src='https://via.placeholder.com/180/42b4e6/FFFFFF?text=QR';">
                 </div>
             </div>
-            
             <div class="scan-animation">
                 <div class="scan-line"></div>
             </div>
@@ -409,7 +407,7 @@
                 <h3>Realidad Mixta</h3>
                 <div class="mr-elements">
                     <div class="mr-element documento">Obra</div>
-                    <div class="mr-element hologram">Holograma</div>
+                    <div class="mr-element hologram" id="holograma-btn">Holograma</div>
                     <div class="mr-element modelo3d">3D</div>
                 </div>
                 <div class="characteristics">
@@ -603,6 +601,11 @@
                 element.addEventListener('click', function() {
                     alert("Interactuando con " + this.textContent + " en MR");
                 });
+            });
+            // Holograma abre link PlayCanvas
+            document.getElementById('holograma-btn').addEventListener('click', function(event) {
+                event.stopPropagation();
+                window.open('https://playcanv.as/p/6NHxB0kw/', '_blank');
             });
         });
         function checkDeviceCapabilities() {
