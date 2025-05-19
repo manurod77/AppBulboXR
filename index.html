@@ -1,31 +1,3 @@
-<div class="mr-elements">
-    <div class="mr-element documento">Obra</div>
-    <div class="mr-element hologram" id="holograma-btn">Holograma</div>
-    <div class="mr-element modelo3d">3D</div>
-</div>
-Nota: Agregué id="holograma-btn" al div de "Holograma".
-
-2. Agrega el JavaScript para el botón
-Dentro del <script>, después de la sección donde agregas listeners a .mr-element, añade esto:
-
-JavaScript
-// Hacer que el botón Holograma abra el enlace solicitado
-document.getElementById('holograma-btn').addEventListener('click', function(event) {
-    event.stopPropagation(); // Opcional: para evitar alert genérico
-    window.open('https://playcanv.as/p/6NHxB0kw/', '_blank');
-});
-3. Resultado final
-El botón “Holograma” abrirá el link en una pestaña nueva.
-Los otros botones MR seguirán mostrando el alert como antes.
-¿Quieres el bloque completo de código listo para copiar y pegar? ¿O necesitas que te indique el lugar exacto en tu archivo?
-
-MANDAME TODO PARA COPIAR Y PEGAR
-¡Por supuesto!
-Aquí tienes el código completo de tu archivo index.html con el botón "Paseo 360°" funcionando en la sección AR y el botón "Holograma" abriendo el enlace https://playcanv.as/p/6NHxB0kw/ en la sección MR.
-Copia y pega todo el contenido en tu archivo index.html.
-Ambos botones funcionarán correctamente y el resto de la app no se verá afectada.
-
-HTML
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -413,7 +385,7 @@ HTML
                 <h3>Barranco</h3>
                 <div class="ar-elements">
                     <div class="ar-element">Mural</div>
-                    <div class="ar-element">Historia</div>
+                    <div class="ar-element" id="historia-btn">Historia</div>
                     <div class="ar-element">Escultura</div>
                     <div class="ar-element" id="paseo360-btn">Paseo 360°</div>
                 </div>
@@ -622,6 +594,11 @@ HTML
             document.getElementById('paseo360-btn').addEventListener('click', function(event) {
                 event.stopPropagation();
                 window.open('https://orbix360.com/f1WBqHGtI', '_blank');
+            });
+            // Historia abre link de YouTube
+            document.getElementById('historia-btn').addEventListener('click', function(event) {
+                event.stopPropagation();
+                window.open('https://www.youtube.com/watch?v=VQYsyknV62w', '_blank');
             });
             // MR elements interaction
             const mrElements = document.querySelectorAll('.mr-element');
