@@ -729,14 +729,6 @@ arElements.forEach(function(element) {
         alert("Contenido de " + this.textContent + " cargado en AR");
     });
 });
-
-// Botón Paseo 360° en AR Geolocalizada
-document.getElementById('paseo360-btn').addEventListener('click', function(event) {
-    event.stopPropagation(); // Para evitar el alert de los otros botones AR
-    window.open('https://orbix360.com/f1WBqHGtI', '_blank');
-});
-            
-
         
         // Simulation of AR/VR capabilities detection
         function checkDeviceCapabilities() {
