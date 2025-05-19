@@ -12,7 +12,6 @@
             --vr-color: #4682B4;
             --light-bg: #f0f5ff;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -20,14 +19,11 @@
             background-color: var(--light-bg);
             color: #333;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        
-        /* ENCABEZADO PRINCIPAL */
         header {
             text-align: center;
             padding: 30px 0;
@@ -36,7 +32,6 @@
             border-radius: 10px;
             margin-bottom: 30px;
         }
-        
         header h1 {
             color: white;
             font-size: 36px;
@@ -45,28 +40,24 @@
             margin: 0 0 10px 0;
             text-transform: uppercase;
         }
-        
         header p {
             color: #e0e0e0;
             font-size: 18px;
             margin: 0;
             font-weight: 300;
         }
-        
         .logo {
             max-width: 150px;
             max-height: 150px;
             margin: 0 auto 15px auto;
             display: block;
         }
-        
         .postcard-logo {
             max-width: 180px;
             max-height: 180px;
             margin: 15px auto;
             display: block;
         }
-        
         .qr-image {
             width: 180px;
             height: 180px;
@@ -74,8 +65,6 @@
             display: block;
             border-radius: 8px;
         }
-        
-        /* Menú Interactivo */
         .menu-container {
             background-color: var(--primary-color);
             border-radius: 10px;
@@ -84,19 +73,16 @@
             color: white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
-        
         .menu-title {
             text-align: center;
             margin-bottom: 20px;
         }
-        
         .menu-options {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             gap: 20px;
         }
-        
         .menu-option {
             background-color: white;
             border-radius: 10px;
@@ -108,13 +94,10 @@
             transition: transform 0.3s, box-shadow 0.3s;
             color: #333;
         }
-        
         .menu-option:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-        
-        /* Experiencias */
         .experience-container {
             display: none;
             margin: 20px 0;
@@ -124,26 +107,21 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             animation: fadeIn 0.5s;
         }
-        
         .ar-experience {
             background-color: var(--ar-color);
         }
-        
         .mr-experience {
             background-color: var(--mr-color);
         }
-        
         .vr-experience {
             background-color: var(--vr-color);
         }
-        
         .experience-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
-        
         .back-button {
             background-color: rgba(255,255,255,0.2);
             border: none;
@@ -153,25 +131,20 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        
         .back-button:hover {
             background-color: rgba(255,255,255,0.3);
         }
-        
         .experience-content {
             background-color: rgba(255,255,255,0.1);
             border-radius: 10px;
             padding: 20px;
         }
-        
-        /* AR Experience */
         .ar-elements {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
         }
-        
         .ar-element {
             background-color: rgba(255,255,255,0.8);
             border-radius: 50%;
@@ -185,31 +158,25 @@
             cursor: pointer;
             transition: transform 0.3s;
         }
-        
         .ar-element:hover {
             transform: scale(1.1);
         }
-        
         .characteristics {
             background-color: rgba(255,255,255,0.2);
             border-radius: 10px;
             padding: 15px;
             margin-top: 20px;
         }
-        
-        /* MR Experience */
         .mr-elements {
             display: flex;
             justify-content: center;
             gap: 20px;
             margin-bottom: 20px;
         }
-        
         .mr-element {
             position: relative;
             text-align: center;
         }
-        
         .mr-element.hologram {
             width: 120px;
             height: 120px;
@@ -219,7 +186,6 @@
             align-items: center;
             justify-content: center;
         }
-        
         .mr-element.documento, .mr-element.modelo3d {
             width: 80px;
             height: 100px;
@@ -229,12 +195,9 @@
             justify-content: center;
             transform: rotate(-5deg);
         }
-        
         .mr-element.modelo3d {
             transform: rotate(5deg);
         }
-        
-        /* VR Experience */
         .vr-environment {
             height: 200px;
             background-color: rgba(255,255,255,0.2);
@@ -243,14 +206,11 @@
             overflow: hidden;
             margin-bottom: 20px;
         }
-        
         .vr-bubble {
             position: absolute;
             background-color: rgba(106, 90, 205, 0.6);
             border-radius: 50%;
         }
-        
-        /* Postcard */
         .postcard {
             background-color: white;
             border-radius: 10px;
@@ -258,7 +218,6 @@
             margin: 20px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
-        
         .postcard-title {
             text-align: center;
             color: #333;
@@ -266,13 +225,11 @@
             font-size: 24px;
             font-weight: bold;
         }
-        
         .postcard-sides {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
         }
-        
         .postcard-side {
             flex: 1;
             min-width: 250px;
@@ -284,17 +241,14 @@
             align-items: center;
             text-align: center;
         }
-        
         .postcard-side.frontal {
             background-color: #0a0a0a;
             color: white;
         }
-        
         .postcard-side.reverso {
             background-color: #f9f9f9;
             color: #333;
         }
-        
         .postcard-side h3 {
             text-align: center;
             margin-bottom: 15px;
@@ -303,8 +257,6 @@
             width: 80%;
             font-size: 18px;
         }
-        
-        /* Footer */
         footer {
             text-align: center;
             margin-top: 30px;
@@ -313,44 +265,34 @@
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        
         .controls {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 15px;
         }
-        
         .control {
             background-color: #eee;
             border-radius: 20px;
             padding: 8px 15px;
             font-size: 0.9em;
         }
-        
-        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
-        /* Responsive */
         @media (max-width: 768px) {
             .menu-options {
                 flex-direction: column;
                 align-items: center;
             }
-            
             .menu-option {
                 width: 80%;
             }
-            
             .postcard-sides {
                 flex-direction: column;
             }
         }
-        
-        /* Scan Animation */
         .scan-animation {
             width: 100px;
             height: 150px;
@@ -360,7 +302,6 @@
             margin: 20px auto;
             overflow: hidden;
         }
-        
         .scan-line {
             position: absolute;
             width: 100%;
@@ -369,7 +310,6 @@
             top: 0;
             animation: none;
         }
-        
         @keyframes scanAnimation {
             0% { top: 0; }
             100% { top: 100%; }
@@ -400,7 +340,6 @@
                          class="postcard-logo"
                          onerror="this.onerror=null; this.src='https://via.placeholder.com/180/6a5acd/FFFFFF?text=BULBO_XR';">
                 </div>
-                
                 <div class="postcard-side reverso">
                     <h3>REVERSO</h3>
                     <img src="https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/qr.png" 
@@ -422,18 +361,15 @@
         <div class="menu-container" id="menu" style="display: none;">
             <h2 class="menu-title">2. Menú Interactivo BULBO_XR</h2>
             <p style="text-align: center;">WebAR / WebXR (sin app)</p>
-            
             <div class="menu-options">
                 <div class="menu-option" id="ar-option">
                     <h3>1. AR Geolocalizada</h3>
                     <p>Explora experiencias de realidad aumentada basadas en tu ubicación</p>
                 </div>
-                
                 <div class="menu-option" id="mr-option">
                     <h3>2. MR Muestra Digital</h3>
                     <p>Interactúa con contenido en realidad mixta</p>
                 </div>
-                
                 <div class="menu-option" id="vr-option">
                     <h3>3. VR Inmersiva</h3>
                     <p>Sumérgete en entornos virtuales 3D</p>
@@ -447,17 +383,14 @@
                 <h2>3.1. AR Geolocalizada</h2>
                 <button class="back-button">Volver al menú</button>
             </div>
-            
             <div class="experience-content">
                 <h3>Barranco</h3>
-                
                 <div class="ar-elements">
-    <div class="ar-element">Mural</div>
-    <div class="ar-element">Historia</div>
-    <div class="ar-element">Escultura</div>
-    <div class="ar-element" id="paseo360-btn">Paseo 360°</div>
-</div>
-                
+                    <div class="ar-element">Mural</div>
+                    <div class="ar-element">Historia</div>
+                    <div class="ar-element">Escultura</div>
+                    <div class="ar-element" id="paseo360-btn">Paseo 360°</div>
+                </div>
                 <div class="characteristics">
                     <h4>Características:</h4>
                     <p>GPS + Brújula</p>
@@ -472,16 +405,13 @@
                 <h2>3.2. Muestra Digital MR</h2>
                 <button class="back-button">Volver al menú</button>
             </div>
-            
             <div class="experience-content">
                 <h3>Realidad Mixta</h3>
-                
                 <div class="mr-elements">
                     <div class="mr-element documento">Obra</div>
                     <div class="mr-element hologram">Holograma</div>
                     <div class="mr-element modelo3d">3D</div>
                 </div>
-                
                 <div class="characteristics">
                     <h4>Características:</h4>
                     <p>Superpuestos en espacios físicos</p>
@@ -496,15 +426,12 @@
                 <h2>3.3. Experiencia VR</h2>
                 <button class="back-button">Volver al menú</button>
             </div>
-            
             <div class="experience-content">
                 <h3>Inmersiva</h3>
-                
                 <div class="vr-environment">
                     <div style="text-align: center; padding-top: 80px;">Entorno 3D Inmersivo</div>
                     <!-- VR bubbles generated by JS -->
                 </div>
-                
                 <div class="characteristics">
                     <h4>Características:</h4>
                     <p>Visor VR o navegador inmersivo</p>
@@ -526,52 +453,37 @@
     <script>
         // Precargar imágenes para mejor rendimiento
         function preloadImages() {
-            // Intentar diferentes formatos de URL para las imágenes
             const imageUrls = [
-                // Formato raw.githubusercontent.com
                 "https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/logo.png",
                 "https://raw.githubusercontent.com/manurod77/AppBulboXR/main/img/QR.png",
-                // Formato github.com con raw=true
                 "https://github.com/manurod77/AppBulboXR/blob/main/img/logo.png?raw=true",
                 "https://github.com/manurod77/AppBulboXR/blob/main/img/QR.png?raw=true"
             ];
-            
             imageUrls.forEach(function(url) {
                 const img = new Image();
                 img.src = url;
                 console.log("Precargando imagen: " + url);
             });
         }
-        
-        // Monitorear carga de imágenes
         function monitorImageLoading() {
             const images = document.querySelectorAll('img');
             images.forEach(function(img) {
                 img.addEventListener('load', function() {
                     console.log('Imagen cargada correctamente:', img.src);
                 });
-                
                 img.addEventListener('error', function() {
                     console.error('Error al cargar la imagen:', img.src);
-                    // Intenta URL directa de GitHub
                     if (img.src.includes('github.com') && img.src.includes('blob/main')) {
-                        // Convertir URL de GitHub a raw.githubusercontent.com
                         let rawUrl = img.src.replace('github.com', 'raw.githubusercontent.com')
                                            .replace('/blob/main/', '/main/');
-                        rawUrl = rawUrl.split('?')[0]; // Quitar parámetros
-                        
+                        rawUrl = rawUrl.split('?')[0];
                         console.log('Intentando URL alternativa:', rawUrl);
                         img.src = rawUrl;
-                    }
-                    // Si es una URL raw que falló, intentar con placeholder
-                    else if (img.src.includes('raw.githubusercontent.com')) {
-                        // Si es logo
+                    } else if (img.src.includes('raw.githubusercontent.com')) {
                         if (img.src.includes('logo.png')) {
                             console.log('Usando placeholder para el logo...');
                             img.src = 'https://via.placeholder.com/180/6a5acd/FFFFFF?text=BULBO_XR';
-                        }
-                        // Si es QR
-                        else if (img.src.includes('QR.png')) {
+                        } else if (img.src.includes('QR.png')) {
                             console.log('Usando placeholder para el QR...');
                             img.src = 'https://via.placeholder.com/180/42b4e6/FFFFFF?text=QR';
                         }
@@ -579,139 +491,91 @@
                 });
             });
         }
-        
-        // Generate VR bubbles
         function generateVRBubbles() {
             const container = document.querySelector('.vr-environment');
             const bubbleCount = 10;
-            
             for (let i = 0; i < bubbleCount; i++) {
                 const bubble = document.createElement('div');
                 bubble.className = 'vr-bubble';
-                
-                // Random size between 10px and 30px
                 const size = Math.floor(Math.random() * 20) + 10;
                 bubble.style.width = size + "px";
                 bubble.style.height = size + "px";
-                
-                // Random position
                 const posX = Math.floor(Math.random() * 100);
                 const posY = Math.floor(Math.random() * 100);
                 bubble.style.left = posX + "%";
                 bubble.style.top = posY + "%";
-                
-                // Add animation with random duration
                 const duration = Math.floor(Math.random() * 10) + 5;
                 bubble.style.animation = "fadeIn " + duration + "s infinite alternate";
-                
                 container.appendChild(bubble);
             }
         }
-        
-        // Precargar contenido AR
         function preloadARContent() {
             console.log("Precargando contenido AR...");
-            // Simulación de carga de recursos
-            
-            // En una implementación real, aquí cargaríamos modelos 3D y assets
             const arPoints = [
                 { id: "mural", name: "Mural", lat: -12.1492, lng: -77.0218 },
                 { id: "historia", name: "Historia", lat: -12.1475, lng: -77.0207 },
                 { id: "escultura", name: "Escultura", lat: -12.1469, lng: -77.0223 }
             ];
-            
-            // Almacenar en localStorage para uso posterior
             localStorage.setItem("arPoints", JSON.stringify(arPoints));
         }
-        
-        // Navigation functions
         document.addEventListener('DOMContentLoaded', function() {
-            // Monitorear carga de imágenes
             monitorImageLoading();
-            
-            // Precargar imágenes
             preloadImages();
-            
             generateVRBubbles();
-            
-            // Configuración de scan de código QR
             const scanButton = document.getElementById('start-experience');
             scanButton.addEventListener('click', function() {
-                // Animar escaneo
                 const scanLine = document.querySelector('.scan-line');
                 scanLine.style.animation = "scanAnimation 1.5s infinite";
-                
-                // Simular detección de código después de 2 segundos
                 setTimeout(function() {
                     document.getElementById('postcard').style.display = 'none';
                     document.getElementById('menu').style.display = 'block';
-                    
-                    // Efecto visual de transición
                     const menu = document.getElementById('menu');
                     menu.style.opacity = '0';
                     menu.style.transform = 'translateY(20px)';
                     menu.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                    
                     setTimeout(function() {
                         menu.style.opacity = '1';
                         menu.style.transform = 'translateY(0)';
                     }, 100);
-                    
-                    // Precargar contenido AR
                     preloadARContent();
                 }, 2000);
             });
-            
-            // Menu options
             document.getElementById('ar-option').addEventListener('click', function() {
                 document.getElementById('menu').style.display = 'none';
                 document.getElementById('ar-experience').style.display = 'block';
-                
-                // Animación de entrada
                 const arExperience = document.getElementById('ar-experience');
                 arExperience.style.opacity = '0';
                 arExperience.style.transform = 'scale(0.95)';
                 arExperience.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                
                 setTimeout(function() {
                     arExperience.style.opacity = '1';
                     arExperience.style.transform = 'scale(1)';
                 }, 100);
             });
-            
             document.getElementById('mr-option').addEventListener('click', function() {
                 document.getElementById('menu').style.display = 'none';
                 document.getElementById('mr-experience').style.display = 'block';
-                
-                // Animación de entrada
                 const mrExperience = document.getElementById('mr-experience');
                 mrExperience.style.opacity = '0';
                 mrExperience.style.transform = 'scale(0.95)';
                 mrExperience.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                
                 setTimeout(function() {
                     mrExperience.style.opacity = '1';
                     mrExperience.style.transform = 'scale(1)';
                 }, 100);
             });
-            
             document.getElementById('vr-option').addEventListener('click', function() {
                 document.getElementById('menu').style.display = 'none';
                 document.getElementById('vr-experience').style.display = 'block';
-                
-                // Animación de entrada
                 const vrExperience = document.getElementById('vr-experience');
                 vrExperience.style.opacity = '0';
                 vrExperience.style.transform = 'scale(0.95)';
                 vrExperience.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                
                 setTimeout(function() {
                     vrExperience.style.opacity = '1';
                     vrExperience.style.transform = 'scale(1)';
                 }, 100);
             });
-            
-            // Back buttons
             const backButtons = document.querySelectorAll('.back-button');
             backButtons.forEach(function(button) {
                 button.addEventListener('click', function() {
@@ -720,22 +584,30 @@
                     });
                     document.getElementById('menu').style.display = 'block';
                 });
-            });         
-            
+            });
             // AR elements interaction
-const arElements = document.querySelectorAll('.ar-element');
-arElements.forEach(function(element) {
-    element.addEventListener('click', function() {
-        alert("Contenido de " + this.textContent + " cargado en AR");
-    });
-});
-        
-        // Simulation of AR/VR capabilities detection
+            const arElements = document.querySelectorAll('.ar-element');
+            arElements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    alert("Contenido de " + this.textContent + " cargado en AR");
+                });
+            });
+            // Paseo 360 (sobreescribe solo el click de ese botón)
+            document.getElementById('paseo360-btn').addEventListener('click', function(event) {
+                event.stopPropagation();
+                window.open('https://orbix360.com/f1WBqHGtI', '_blank');
+            });
+            // MR elements interaction
+            const mrElements = document.querySelectorAll('.mr-element');
+            mrElements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    alert("Interactuando con " + this.textContent + " en MR");
+                });
+            });
+        });
         function checkDeviceCapabilities() {
-            // Check if WebXR is supported
             if ('xr' in navigator) {
                 console.log('WebXR supported');
-                // Check AR support
                 navigator.xr.isSessionSupported('immersive-ar')
                     .then(function(arSupported) {
                         console.log('AR Support:', arSupported);
@@ -743,8 +615,6 @@ arElements.forEach(function(element) {
                     .catch(function(err) {
                         console.error('AR check error:', err);
                     });
-                
-                // Check VR support
                 navigator.xr.isSessionSupported('immersive-vr')
                     .then(function(vrSupported) {
                         console.log('VR Support:', vrSupported);
@@ -755,19 +625,13 @@ arElements.forEach(function(element) {
             } else {
                 console.log('WebXR not supported');
             }
-            
-            // Check geolocation
             if ('geolocation' in navigator) {
                 console.log('Geolocation available');
             } else {
                 console.log('Geolocation not available');
             }
         }
-        
-        // Execute capability check
         window.addEventListener('load', checkDeviceCapabilities);
-        
-        // Check if page is loaded from vercel.app and log
         window.addEventListener('load', function() {
             console.log("BULBO_XR aplicación cargada completamente");
             console.log("Versión: 2.0.0");
