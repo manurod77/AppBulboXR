@@ -456,6 +456,12 @@
     <div class="ar-element">Historia</div>
     <div class="ar-element">Escultura</div>
     <div class="ar-element" id="paseo360-btn">Paseo 360°</div>
+
+document.getElementById('paseo360-btn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Para que no dispare el alert general de .ar-element
+    window.open('https://orbix360.com/f1WBqHGtI', '_blank');
+});
+                    
 </div>
                 
                 <div class="characteristics">
