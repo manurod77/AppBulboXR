@@ -456,12 +456,6 @@
     <div class="ar-element">Historia</div>
     <div class="ar-element">Escultura</div>
     <div class="ar-element" id="paseo360-btn">Paseo 360°</div>
-
-document.getElementById('paseo360-btn').addEventListener('click', function(event) {
-    event.stopPropagation(); // Para que no dispare el alert general de .ar-element
-    window.open('https://orbix360.com/f1WBqHGtI', '_blank');
-});
-                    
 </div>
                 
                 <div class="characteristics">
@@ -729,21 +723,18 @@ document.getElementById('paseo360-btn').addEventListener('click', function(event
             });
             
             // AR elements interaction
-            const arElements = document.querySelectorAll('.ar-element');
-            arElements.forEach(function(element) {
-                element.addEventListener('click', function() {
-                    alert("Contenido de " + this.textContent + " cargado en AR");
-                });
-            });
-            
-            // MR elements interaction
-            const mrElements = document.querySelectorAll('.mr-element');
-            mrElements.forEach(function(element) {
-                element.addEventListener('click', function() {
-                    alert("Interactuando con " + this.textContent + " en MR");
-                });
-            });
-        });
+const arElements = document.querySelectorAll('.ar-element');
+arElements.forEach(function(element) {
+    element.addEventListener('click', function() {
+        alert("Contenido de " + this.textContent + " cargado en AR");
+    });
+});
+
+// Botón Paseo 360° en AR Geolocalizada
+document.getElementById('paseo360-btn').addEventListener('click', function(event) {
+    event.stopPropagation(); // Para que no dispare el alert general de .ar-element
+    window.open('https://orbix360.com/f1WBqHGtI', '_blank');
+});
         
         // Simulation of AR/VR capabilities detection
         function checkDeviceCapabilities() {
