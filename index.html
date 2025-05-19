@@ -720,9 +720,9 @@
                     });
                     document.getElementById('menu').style.display = 'block';
                 });
-            });
+            });         
             
-         // AR elements interaction
+            // AR elements interaction
 const arElements = document.querySelectorAll('.ar-element');
 arElements.forEach(function(element) {
     element.addEventListener('click', function() {
@@ -735,6 +735,8 @@ document.getElementById('paseo360-btn').addEventListener('click', function(event
     event.stopPropagation(); // Para evitar el alert de los otros botones AR
     window.open('https://orbix360.com/f1WBqHGtI', '_blank');
 });
+            
+
         
         // Simulation of AR/VR capabilities detection
         function checkDeviceCapabilities() {
