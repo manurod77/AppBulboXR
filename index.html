@@ -722,7 +722,7 @@
                 });
             });
             
-            // AR elements interaction
+         // AR elements interaction
 const arElements = document.querySelectorAll('.ar-element');
 arElements.forEach(function(element) {
     element.addEventListener('click', function() {
@@ -732,7 +732,7 @@ arElements.forEach(function(element) {
 
 // Botón Paseo 360° en AR Geolocalizada
 document.getElementById('paseo360-btn').addEventListener('click', function(event) {
-    event.stopPropagation(); // Para que no dispare el alert general de .ar-element
+    event.stopPropagation(); // Para evitar el alert de los otros botones AR
     window.open('https://orbix360.com/f1WBqHGtI', '_blank');
 });
         
