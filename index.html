@@ -589,8 +589,10 @@
                 event.stopPropagation();
                 window.open('https://www.youtube.com/watch?v=VQYsyknV62w', '_blank');
             });
-            document.getElementById('escultura-ar-btn').addEventListener('click', function() {
-                alert("Contenido de Escultura cargado en AR");
+            document.getElementById('escultura-ar-btn').addEventListener('click', function(event) {
+                event.stopPropagation();
+                // Se mantiene el comportamiento anterior y se agrega el nuevo link
+                window.open('https://www.youtube.com/watch?v=QKzl99-Wk-8', '_blank');
             });
             document.getElementById('paseo360-btn').addEventListener('click', function(event) {
                 event.stopPropagation();
